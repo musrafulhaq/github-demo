@@ -1,0 +1,2 @@
+Hi, My name is Musraful Haque
+I would like to apply for the position of AWS cloud engineer as a fresher. I am good knowledge of Linux, Shell scripting, and AWS solution architect associate. I am curious to learn more. I have the plan to learn Docker, Kubernetes, Terraform, etc.
