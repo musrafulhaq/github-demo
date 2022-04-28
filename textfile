@@ -1,0 +1,102 @@
+#!/bin/bash
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+cd /var/www/html
+echo "<html><h1>This is my first webpage</h1><html>"  > index.html
+
+
+
+
+
+#!/bin/bash
+sudo su -
+yum update -y
+yum install httpd -y
+cd /var/www/html
+echo "This is webserver 02" >index.html
+service httpd start
+chkconfig httpd on
+
+
+
+
+#!/bin/bash
+sudo su -
+yum update -y
+yum install httpd php-mysql -y
+cd /var/www/html
+echo "healthy" > healthy.html
+wget https://wordpress.org/latest.tar.gz
+tar -xzf latest.tar.gz
+cp -r wordpress/* /var/www/html/
+rm -rf wordpress
+rm -rf latest.tar.gz
+chmod -R 755 wp-content
+chown -R apache:apache wp-content
+service httpd start
+chkconfig httpd on
+
+
+
+
+
+import json
+
+def lambda_handler(event, context):
+    # TODO implement
+    print("In lambda handler")
+    resp = {
+        "statusCode=200"
+        "headers": {
+            "Access-Control-Allow-Origin":"*",
+        }
+        "body": "Musraful Haque"
+    }
+    return resp
+
+
+Github token Password:-
+ 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
+ 
+ 
+ 
+ 
+ 
+ git stash:-
+ 	git stash temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on.
+ 	
+ 	git stash work on back to previous changes.
+ 	
+ 	
+ 	code simple.html
+ 	# Some changes
+ 	
+ 	git stash
+ 	#Go to the previous
+ 	
+ 	git stash apply
+ 	#Modified changes file
+ 	
+ 	git commit -m ""
+ 	
+ 	git status
+ 	git stash --list
+ 	git stash drop
+ 	
+ 	
+ 	git stash save " "
+ 	git stash list 
+ 	git stash show stash@{0}
+ 	
+ 	git stash apply stash@{0}
+ 	
+ 	git stash clear
+ 	git stash list (No list)
+ 	
+ 	git stash -u ---> save the all modified and new files.
+ 	
+ 	git stash branch newchanges
+ 	# Create a new branch. Switch into the branch newchanges
+ 
